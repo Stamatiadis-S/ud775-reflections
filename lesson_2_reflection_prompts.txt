@@ -14,12 +14,22 @@ repository? What value do you think it offers?
 How can you use the staging area to make sure you have one commit per logical
 change?
 
-
+    Use the "git diff --staged" to see the staged changes about to be
+    committed or use the "git diff" command to see the changes in your working
+    directory and then use "git add <file1, file2, etc..>" to stage them. Each
+    time make sure the changes you add to the staging area to be logically
+    separated. In case you want to un-stage a file, use the "git reset <file>"
+    command. Use "git reset <file> --hard" to un-stage the file and also
+    discard any changes you made.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
-
+    Adding new features or tweaking existing parts of the code are very good
+    reasons to use branches. Branches help programmers to work and test on
+    different versions of the project simultaneously without polluting the
+    main branch. Later on, different branches can be merged to main(master)
+    or other branches.
 
 How do the diagrams help you visualize the branch structure?
 
