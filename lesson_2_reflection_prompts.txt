@@ -33,12 +33,19 @@ organized? How would branches help?
 
 How do the diagrams help you visualize the branch structure?
 
-
+    By showing each commit and its parent in a treeview fashion for each
+    branch specified in the command parameters.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
-
+    The result of merging two branches is another commit consisting of all the
+    changes that took place after their common parent(commit) in the two
+    branches.
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+
+    Pros: - Automatic merging removes some hassle from the developer
+    Cons: - Sometimes automatic merging won't get it correct
+          - Manual merging may seem confusing in the beginning
