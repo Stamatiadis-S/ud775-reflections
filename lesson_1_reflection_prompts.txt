@@ -6,8 +6,11 @@ was introduced?
 How could having easy access to the entire history of a file make you a more
 efficient programmer in the long term?
 
-    By giving me better control over the project and making understanding and
-    debugging easier.
+    - projects are easier to understand
+    - faster debugging
+    - testing of older versions made easy
+    - better issue tracking
+    - ability to fall back on older code and avoid disasters
 
 What do you think are the pros and cons of manually choosing when to create a
 commit, like you do in Git, vs having versions automatically saved, like Google
@@ -15,25 +18,29 @@ docs does?
 
     Pros: - having a compact and meaningful version history
           - more flexibility
-    Cons: - requires human judgement
-          - chance for too big or small changes
+          - code will most probably compile
+
+    Cons: - can become really complex
+          - requires good knowledge of git and its workflow in order to keep a
+          keep a clean repository
 
 Why do you think some version control systems, like Git, allow saving multiple
 files in one commit, while others, like Google Docs, treat each file
 separately?
 
-    Because they are designed for code where files are usually related or
+    Because they were designed for code where files are usually related or
     interconnected.
 
 How can you use the commands git log and git diff to view the history of files?
 
-    git log [--oneline] [--stat]
-    git diff <File1_id> <File2_id>
+    git log [--oneline] [--stat] [--graph]
+    git diff <File1_id> <File2_id>, git diff <Commit1_id> <Commit2_id>
 
 How might using version control make you more confident to make changes that
 could break something?
 
-    By giving me the ability to revert back and fourth between version.
+    By giving me the ability to revert the changes or move to older working
+    versions.
 
 Now that you have your workspace set up, what do you want to try using Git for?
 

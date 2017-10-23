@@ -1,7 +1,7 @@
 What happens when you initialize a repository? Why do you need to do it?
 
     A hidden .git folder is created where all of the data needed for git to
-    work is stored. It is required because that way git can start tracking
+    work are stored. It is required because only then can git start tracking
     files and saving commits on demand.
 
 How is the staging area different from the working directory and the
@@ -9,7 +9,8 @@ repository? What value do you think it offers?
 
     Some files don't need to be tracked but exist in the working directory.
     In the staging area one can specify which files are to be changed in
-    each commit.
+    each commit. Without the staging buffer, merging, committing and other
+    operations would become more complex.
 
 How can you use the staging area to make sure you have one commit per logical
 change?
@@ -19,8 +20,8 @@ change?
     directory and then use "git add <file1, file2, etc..>" to stage them. Each
     time make sure the changes you add to the staging area to be logically
     separated. In case you want to un-stage a file, use the "git reset <file>"
-    command. Use "git reset <file> --hard" to un-stage the file and also
-    discard any changes you made.
+    command. Use "git reset <file> --hard" to un-stage the file and discard
+    any changes you made.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
@@ -29,7 +30,8 @@ organized? How would branches help?
     reasons to use branches. Branches help programmers to work and test on
     different versions of the project simultaneously without polluting the
     main branch. Later on, different branches can be merged to main(master)
-    or other branches.
+    or other branches. It might be a good practice to work in a different
+    branch for each separate task/bug/feature.
 
 How do the diagrams help you visualize the branch structure?
 
@@ -40,12 +42,14 @@ What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
     The result of merging two branches is another commit consisting of all the
-    changes that took place after their common parent(commit) in the two
-    branches.
+    changes(commits) that took place after their common parent in the two
+    branches. The commits are saved in chronological order.
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
 
-    Pros: - Automatic merging removes some hassle from the developer
-    Cons: - Sometimes automatic merging won't get it correct
-          - Manual merging may seem confusing in the beginning
+    - Automatic merging removes some hassle from the developer
+    - Automatic merging won't always work
+    - Manual merging may seem confusing in the beginning
+    - Manual merging requires focus and time in some cases
+    - Manual merging gives full flexibility
